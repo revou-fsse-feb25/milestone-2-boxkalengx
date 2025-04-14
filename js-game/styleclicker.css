@@ -1,0 +1,9 @@
+body {
+  min-height: 100vh;
+  background: url(../js-game/assets/clicker.jpg);
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+}

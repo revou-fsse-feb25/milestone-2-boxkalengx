@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: url(../js-game/assets/joystick.png);
+  display: flex;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+header .logo {
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  margin-left: 20px;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+header nav a:hover,
+header nav a.active {
+  background: white;
+  color: #25292d;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  header {
+    padding: 20px 40px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 40px;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 10px 20px;
+    border-radius: 10px;
+    z-index: 999;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav a {
+    margin: 10px 0;
+  }
+}
+
+.welcome {
+  position: absolute;
+  width: 60%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.welcome h1 {
+  color: white;
+  font-size: 1.5em;
+  font-weight: 1000;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.welcome h2 {
+  color: white;
+  font-size: small;
+  font-weight: 200;
+}
+
+.welcome .lets-play {
+  border: none;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 1em;
+  font-weight: 1000;
+  margin-top: 15px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.welcome .lets-play:hover {
+  background: #51db6a;
+  color: white;
+}
+
+footer {
+  color: aliceblue;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+}
+
+.footer p {
+  text-align: center;
+  line-height: 1;
+  font-size: 0.7em;
+}

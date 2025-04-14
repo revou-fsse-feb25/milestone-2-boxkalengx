@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: url(../js-game/assets/scissors.jpg);
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+body {
+  text-align: center;
+  padding: 50px;
+}
+
+.game-container {
+  background: rgb(255, 255, 255);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #ccc;
+  max-width: 400px;
+  margin: auto;
+}
+
+.choices button {
+  font-size: 24px;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+footer {
+  color: aliceblue;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+}
+
+.back-buttons {
+  border: none;
+  color: #eeeeee;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 1em;
+  font-weight: 1000;
+  margin-top: 15px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.back-buttons:hover {
+  background: #26293c;
+  color: white;
+}
