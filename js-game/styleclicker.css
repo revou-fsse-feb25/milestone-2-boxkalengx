@@ -1,3 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
 body {
   min-height: 100vh;
   background: url(../js-game/assets/clicker.jpg);
@@ -11,6 +18,24 @@ body {
   user-select: none;
 }
 
+.back-buttons {
+  border: none;
+  color: #eeeeee;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 1em;
+  font-weight: 1000;
+  margin-top: 15px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.back-buttons:hover {
+  background: #26293c;
+  color: white;
+}
+
 .main {
   display: 200px;
   gap: 200px;
@@ -20,6 +45,7 @@ body {
   text-align: center;
   font-size: 30px;
   margin-bottom: 50px;
+  color: white;
 }
 
 .gem-image {
@@ -42,24 +68,38 @@ body {
   justify-content: space-between;
   width: 330px;
   height: 60px;
-  border: 4px solid white;
+  border: 1px solid white;
   padding: 10px 20px;
   border-radius: 5px;
+  background-color: rgb(54, 62, 39);
 }
 
 .mid-section h4 {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 2px;
   font-size: 20px;
+  color: white;
 }
 
 .mid-section p {
   margin: 0;
+  color: white;
 }
 
 .upgrade-img {
-  width: 20px;
-  height: 20px;
+  width: 60px;
+  height: 60px;
+  margin-top: 5px;
+}
+
+.upgrade-img:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.upgrade-img:active {
+  opacity: 0.8;
+  transform: scale(1.02);
 }
 
 .gem-img {
@@ -71,4 +111,8 @@ body {
   display: flex;
   align-items: center;
   gap: 5px;
+}
+
+.right-section {
+  color: white;
 }

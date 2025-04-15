@@ -7,19 +7,22 @@
     <link rel="stylesheet" href="styleclicker.css" />
   </head>
   <body>
+    <div>
+      <a href="index.html" class="back-buttons">Back</a>
+    </div>
     <section>
       <div class="main">
         <div class="left">
-          <h3>Ngebul: <span class="gem-cost">0</span></h3>
+          <h3>Score: <span class="gem-cost">0</span></h3>
           <img src="../js-game/assets/clickme.png" alt="" srcset="" class="gem-image" onclick="incrementGem()" draggable="false" />
         </div>
         <div class="right">
           <div class="upgrade" onclick="buyClicker()">
             <div class="left-section">
-              <img src="../js-game/assets/click.png" alt="" class="upgrade-img"> 
+              <img src="../js-game/assets/click.png" alt="" class="upgrade-img" onclick="buyClicker()"> 
             </div>
             <div class="mid-section">
-<h4>Clicker</h4>
+<h4>Buy Clicker</h4>
 <div class="cost-info">
   <p>Cost: <span class="clicker-cost">10</span></p>
   <img src="../js-game/assets/topup.png" alt="" srcset="" class="gem-img">

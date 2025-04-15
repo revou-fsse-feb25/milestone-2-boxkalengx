@@ -13,6 +13,8 @@ body {
   min-height: 100vh;
   background-size: cover;
   background-position: center;
+  user-select: none;
+  place-items: center;
 }
 
 body {
@@ -34,6 +36,19 @@ body {
   padding: 10px 20px;
   margin: 10px;
   cursor: pointer;
+}
+
+.choices button:hover {
+  background-color: rgb(54, 62, 39);
+  color: white;
+  box-shadow: 0 5px #999;
+}
+
+.choices button:active {
+  background-color: rgb(54, 62, 39);
+  color: white;
+  box-shadow: 0 5px #999;
+  transform: translateY(4px);
 }
 
 footer {
@@ -62,4 +77,9 @@ footer {
 .back-buttons:hover {
   background: #26293c;
   color: white;
+}
+
+.game-container p {
+  font-size: 10px;
+  color: rgb(182, 113, 45);
 }
