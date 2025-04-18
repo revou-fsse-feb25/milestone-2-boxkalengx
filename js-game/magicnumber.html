@@ -7,6 +7,21 @@
     <link rel="stylesheet" href="stylemagicnumber.css" />
   </head>
   <body>
-    <h1>processing</h1>
-  </body>
+    <div class="game-container">
+        <h1>Number Guessing Game</h1>
+        <p>Try to guess the number between <span id="min-num">1</span> and <span id="max-num">100</span></p>
+        
+        <div class="input-group">
+            <input type="number" id="guess-input" placeholder="Enter your guess...">
+            <button id="guess-btn">Submit Guess</button>
+        </div>
+        
+        <div id="message" class="message hidden"></div>
+        
+        <div class="attempts">
+            Attempts: <span id="attempts-count">0</span>
+        </div>
+        
+        <button id="reset-btn" class="reset-btn hidden">Play Again</button>
+    </div>
 </html>
