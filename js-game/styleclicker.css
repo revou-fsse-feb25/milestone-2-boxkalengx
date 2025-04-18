@@ -48,6 +48,10 @@ body {
   color: white;
 }
 
+.left h4 {
+  color: white;
+}
+
 .gem-image {
   width: 300px;
 }

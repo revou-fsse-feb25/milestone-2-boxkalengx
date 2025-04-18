@@ -61,7 +61,7 @@ footer {
   position: absolute;
 }
 
-.back-buttons {
+.undo-buttons {
   border: none;
   color: #eeeeee;
   padding: 10px;
@@ -74,7 +74,7 @@ footer {
   text-decoration: none;
 }
 
-.back-buttons:hover {
+.undo-buttons:hover {
   background: #26293c;
   color: white;
 }

@@ -9,6 +9,24 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+.undo-buttons {
+  border: none;
+  color: #eeeeee;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 1em;
+  font-weight: 1000;
+  margin-top: 15px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.undo-buttons:hover {
+  background: #26293c;
+  color: white;
+}
+
 .game-container {
   background-color: rgb(50, 175, 121);
   border-radius: 10px;
