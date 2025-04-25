@@ -7,7 +7,7 @@
 
 body {
   min-height: 100vh;
-  background: url(../js-game/assets/scissors.jpg);
+  background: url(/assets/scissors.jpg);
   display: flex;
   justify-content: center;
   min-height: 100vh;

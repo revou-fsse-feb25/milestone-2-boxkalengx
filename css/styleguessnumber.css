@@ -1,6 +1,6 @@
 body {
   min-height: 100vh;
-  background: url(../js-game/assets/rumput.jpg);
+  background: url(/assets/rumput.jpg);
   display: flex;
   justify-content: center;
   min-height: 100vh;
@@ -16,7 +16,7 @@ body {
   border-radius: 20px;
   font-size: 1em;
   font-weight: 1000;
-  margin-top: 15px;
+  margin-top: 243px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   text-decoration: none;
@@ -50,8 +50,8 @@ input {
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ddd;
-  border-radius: 4px;
-  width: 80%;
+  border-radius: 28px;
+  width: 75%;
   margin-bottom: 10px;
 }
 

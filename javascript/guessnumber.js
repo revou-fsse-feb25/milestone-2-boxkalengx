@@ -1,6 +1,4 @@
-const minNum = 1;
-const maxNum = 100;
-const asnwer = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
+import { minNum, maxNum, asnwer } from "./numberguessing.js";
 
 let attempts = 0;
 let guess;
@@ -11,7 +9,7 @@ while (running) {
   guess = Number(guess);
 
   if (isNaN(guess)) {
-    window.alert("Please enter valid number!");
+    window.alert("Please enter valid number!"); //switch case/
   } else if (guess < minNum || guess > maxNum) {
     window.alert("Please enter a valid number");
   } else {
