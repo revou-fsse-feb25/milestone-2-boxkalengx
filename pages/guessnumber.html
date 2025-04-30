@@ -7,22 +7,17 @@
     <link rel="stylesheet" href="/css/styleguessnumber.css" />
   </head>
   <body>
-    <a href="/index.html" class="undo-buttons">Back</a>
-    <div class="game-container">
-        <h1>Number Guessing Game</h1>
-        <p>Try to guess the number between <span id="min-num">1</span> and <span id="max-num">100</span></p>
-        <div class="input-group">
-            <input type="number" id="guess-input" placeholder="Enter your guess...">
-            <button id="guess-btn">Submit Guess</button>
-        </div>
-        
-        <div id="message" class="message hidden"></div>
-        
-        <div class="attempts">
-            Attempts: <span id="attempts-count">0</span>
-        </div>
-        
-        <button id="reset-btn" class="reset-btn hidden">Play Again</button>
-    </div>
-    <script src="/javascript/guessnumber.js"></script>
+<div class="game-container">
+  <h1>Number Guessing Game</h1>
+  <p>Guess a number between 1 and 100</p>
+  <input type="number" id="guess-input" placeholder="Enter your guess" />
+  <button id="submit-btn">Guess</button>
+  <p class="message"></p>
+  <p>Attempts Left: <span id="attempts">5</span></p>
+  <button id="restart-btn" style="display:none;">Play Again</button>
+</div>
+<script src="../js/number.js"></script>
+</body>
+</html>
+  <script src="/javascript/guessnumber.js"></script>
 </html>

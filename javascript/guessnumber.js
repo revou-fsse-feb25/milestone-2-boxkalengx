@@ -1,60 +1,66 @@
-// Import the minimum number, maximum number, and the correct answer from another JS module
-import { minNum, maxNum, asnwer } from "./numberguessing.js";
+// Generate a random number between 1 and 100
+let randomNumber = Math.floor(Math.random() * 100) + 1;
 
-// Initialize a counter to track how many guesses the user has made
-let attempts = 0;
+// Set the number of attempts the player has
+let attemptsLeft = 5;
 
-// Add an event listener to the "Submit Guess" button
-document.querySelector("#submitGuess").addEventListener("click", () => {
-  // Get the user's input, convert it from string to number
-  let guess = Number(document.querySelector("#guessInput").value);
+// Get references to HTML elements
+const input = document.getElementById("guess-input");
+const submitBtn = document.getElementById("submit-btn");
+const message = document.querySelector(".message");
+const attemptsText = document.getElementById("attempts");
+const restartBtn = document.getElementById("restart-btn");
 
-  // This will hold the feedback message for the user
-  let message = "";
+// Event listener for the Submit button
+submitBtn.addEventListener("click", () => {
+  // Convert user input to a number
+  const userGuess = parseInt(input.value);
 
-  // Use a switch statement to evaluate different cases based on the input
-  switch (true) {
-    // Case 1: Input is not a number
-    case isNaN(guess):
-      message = "Please enter a valid number!";
-      changeResultStyle("red", "white"); // Set color to red (error)
-      break;
-
-    // Case 2: Input is outside the valid number range
-    case guess < minNum || guess > maxNum:
-      message = `Enter a number between ${minNum} and ${maxNum}.`;
-      changeResultStyle("orange", "white"); // Set color to orange (warning)
-      break;
-
-    // Case 3: Guess is too low
-    case guess < asnwer:
-      attempts++; // Increase attempt count
-      message = "Too low! Try again.";
-      changeResultStyle("yellow", "black"); // Set color to yellow (hint)
-      break;
-
-    // Case 4: Guess is too high
-    case guess > asnwer:
-      attempts++; // Increase attempt count
-      message = "Too high! Try again.";
-      changeResultStyle("yellow", "black"); // Set color to yellow (hint)
-      break;
-
-    // Case 5: Correct guess
-    case guess === asnwer:
-      attempts++; // Increase attempt count
-      message = `Correct! The answer was ${asnwer}. It took you ${attempts} attempts.`;
-      changeResultStyle("green", "white"); // Set color to green (success)
-      break;
+  // Validate input: check if it's a number between 1 and 100
+  if (isNaN(userGuess) || userGuess < 1 || userGuess > 100) {
+    message.textContent = "Please enter a number between 1 and 100.";
+    return;
   }
 
-  // Display the feedback message to the user
-  document.querySelector("#result").textContent = message;
+  // Check if the guess is correct
+  if (userGuess === randomNumber) {
+    message.textContent = "🎉 Correct! You win!";
+    endGame(); // End the game if guessed correctly
+  } else {
+    // Decrease attempts if the guess is incorrect
+    attemptsLeft--;
+    attemptsText.textContent = attemptsLeft;
+
+    // If no attempts are left, show game over message
+    if (attemptsLeft === 0) {
+      message.textContent = `😢 Game Over! The number was ${randomNumber}.`;
+      endGame();
+    } else {
+      // Give hint to the player
+      message.textContent = userGuess > randomNumber ? "📉 Too High!" : "📈 Too Low!";
+    }
+  }
+
+  // Clear the input field for the next guess
+  input.value = "";
 });
 
-// Function to change the style of the result message
-function changeResultStyle(backgroundColor, textColor) {
-  const resultElement = document.querySelector("#result");
-  resultElement.style.backgroundColor = backgroundColor; // Set background color
-  resultElement.style.color = textColor; // Set text color
+// Function to disable input and show restart button
+function endGame() {
+  input.disabled = true;
+  submitBtn.disabled = true;
+  restartBtn.style.display = "inline-block";
 }
+
+// Event listener for the Restart button
+restartBtn.addEventListener("click", () => {
+  // Reset the game state
+  randomNumber = Math.floor(Math.random() * 100) + 1;
+  attemptsLeft = 5;
+  input.disabled = false;
+  submitBtn.disabled = false;
+  input.value = "";
+  message.textContent = "";
+  attemptsText.textContent = attemptsLeft;
+  restartBtn.style.display = "none";
+});
