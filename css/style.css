@@ -1,3 +1,4 @@
+/* Reset default margin and padding, apply box-sizing and font globally */
 * {
   margin: 0;
   padding: 0;
@@ -5,15 +6,17 @@
   font-family: "Poppins", sans-serif;
 }
 
+/* Set full viewport height and background for the body */
 body {
   min-height: 100vh;
-  background: url(/assets/joystick.png);
+  background: url(/assets/joystick.png); /* Background image */
   display: flex;
-  justify-content: center;
-  background-size: cover;
-  background-position: center;
+  justify-content: center; /* Center content horizontally */
+  background-size: cover; /* Make background cover the whole area */
+  background-position: center; /* Center the background image */
 }
 
+/* Header styles (fixed top navigation bar) */
 header {
   position: absolute;
   top: 0;
@@ -21,11 +24,12 @@ header {
   width: 100%;
   padding: 20px 100px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Space between logo and nav */
   align-items: center;
-  z-index: 1000;
+  z-index: 1000; /* Ensure header stays on top */
 }
 
+/* Logo styles */
 header .logo {
   color: white;
   font-weight: 700;
@@ -35,11 +39,13 @@ header .logo {
   letter-spacing: 2px;
 }
 
+/* Navigation container */
 nav {
   display: flex;
   gap: 20px;
 }
 
+/* Navigation links */
 nav a {
   text-decoration: none;
   color: white;
@@ -48,12 +54,14 @@ nav a {
   padding: 10px;
 }
 
+/* Hover and active state styles for nav links */
 header nav a:hover,
 header nav a.active {
   background: white;
   color: #25292d;
 }
 
+/* Toggle menu icon for mobile */
 .menu-toggle {
   display: none;
   font-size: 28px;
@@ -61,37 +69,43 @@ header nav a.active {
   cursor: pointer;
 }
 
-/* Responsive styles */
+/* Responsive styles for smaller screens */
 @media (max-width: 768px) {
+  /* Reduce padding in header */
   header {
     padding: 20px 40px;
   }
 
+  /* Show menu icon */
   .menu-toggle {
     display: block;
   }
 
+  /* Hide nav links by default */
   nav {
     display: none;
     flex-direction: column;
     position: absolute;
     top: 80px;
     right: 40px;
-    background: rgba(0, 0, 0, 0.85);
+    background: rgba(0, 0, 0, 0.85); /* Semi-transparent background */
     padding: 10px 20px;
     border-radius: 10px;
     z-index: 999;
   }
 
+  /* Show nav when active */
   nav.active {
     display: flex;
   }
 
+  /* Adjust margin for vertical nav items */
   nav a {
     margin: 10px 0;
   }
 }
 
+/* Welcome section centered in the viewport */
 .welcome {
   position: absolute;
   width: 60%;
@@ -101,6 +115,7 @@ header nav a.active {
   text-align: center;
 }
 
+/* Welcome title */
 .welcome h1 {
   color: white;
   font-size: 1.5em;
@@ -109,12 +124,14 @@ header nav a.active {
   text-transform: uppercase;
 }
 
+/* Welcome subtitle */
 .welcome h2 {
   color: white;
   font-size: small;
   font-weight: 200;
 }
 
+/* Button in welcome section */
 .welcome .lets-play {
   border: none;
   color: #ffffff;
@@ -128,11 +145,13 @@ header nav a.active {
   text-decoration: none;
 }
 
+/* Hover effect for play button */
 .welcome .lets-play:hover {
   background: #51db6a;
   color: white;
 }
 
+/* Footer styles fixed at bottom */
 footer {
   color: aliceblue;
   bottom: 0;
@@ -143,6 +162,7 @@ footer {
   position: absolute;
 }
 
+/* Footer paragraph text */
 .footer p {
   text-align: center;
   line-height: 1;

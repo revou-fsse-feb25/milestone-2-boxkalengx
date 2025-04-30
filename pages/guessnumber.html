@@ -1,23 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Character encoding and responsive layout setup -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Page title displayed in the browser tab -->
     <title>Magic Number</title>
+
+    <!-- Link to external CSS for styling the guessing game -->
     <link rel="stylesheet" href="/css/styleguessnumber.css" />
   </head>
   <body>
-<div class="game-container">
-  <h1>Number Guessing Game</h1>
-  <p>Guess a number between 1 and 100</p>
-  <input type="number" id="guess-input" placeholder="Enter your guess" />
-  <button id="submit-btn">Guess</button>
-  <p class="message"></p>
-  <p>Attempts Left: <span id="attempts">5</span></p>
-  <button id="restart-btn" style="display:none;">Play Again</button>
-</div>
-<script src="../js/number.js"></script>
-</body>
-</html>
-  <script src="/javascript/guessnumber.js"></script>
+    <!-- Main container for the game interface -->
+    <div class="game-container">
+      <!-- Game title -->
+      <h1>Number Guessing Game</h1>
+
+      <!-- Instruction text -->
+      <p>Guess a number between 1 and 100</p>
+
+      <!-- Input field for user's guess -->
+      <input type="number" id="guess-input" placeholder="Enter your guess" />
+
+      <!-- Button to submit the guess -->
+      <button id="submit-btn">Guess</button>
+
+      <!-- Message area for feedback (too high, too low, correct, etc.) -->
+      <p class="message"></p>
+
+      <!-- Display remaining attempts -->
+      <p>Attempts Left: <span id="attempts">5</span></p>
+
+      <!-- Hidden restart button that appears after game ends -->
+      <button id="restart-btn" style="display: none">Play Again</button>
+    </div>
+
+    <!-- JavaScript file to handle game logic (possibly incorrect path) -->
+    <script src="../js/number.js"></script>
+
+    <!-- JavaScript file to handle game logic (likely the correct path) -->
+    <script src="/javascript/guessnumber.js"></script>
+  </body>
 </html>
